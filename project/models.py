@@ -10,7 +10,7 @@ class Project(models.Model):
     description = models.TextField()
     notes = models.TextField()
     status = models.BooleanField()
-    end_time = models.DateTimeField()
+    end_time = models.DateTimeField(blank=True, null=False)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)

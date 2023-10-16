@@ -4,7 +4,7 @@ from .models import Project
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    tasks = TaskSerializer(many=True, read_only=False)
+    tasks = TaskSerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
@@ -14,6 +14,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             'notes',
             'status',
             'creator',
+            'end_time',
             'tasks',
             'created_on',
             'updated_on',

@@ -7,7 +7,7 @@ class Task(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField()
     status = models.BooleanField()
-    end_time = models.DateTimeField()
+    end_time = models.DateTimeField(blank=True, null=False)
     project = models.ForeignKey(Project, related_name='tasks', on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
