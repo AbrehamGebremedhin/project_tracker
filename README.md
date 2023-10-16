@@ -1,3 +1,3 @@
 # Project Tracker
 
-A Django Restframework to track the progress of Projects and their tasks.
+A Django Restframework API to track the progress of Projects and their tasks.
