@@ -18,7 +18,7 @@ class ProjectSerializer(serializers.ModelSerializer):
         if completed == 0:
             data['Completed_Percentage'] = 0
         else:
-            data['Completed_Percentage'] = (completed / total)*100
+            data['Completed_Percentage'] = (completed / total) * 100
         return data
 
     class Meta:
